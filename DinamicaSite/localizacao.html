@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dinâmica Ferragens</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html">Dinâmica Ferragens</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="produtos.html">Produtos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="servicos.html">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <section id="banner" class="bg-light text-center">
+    <h2>Localização</h2>
+    <br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15349.997540157488!2d-48.0173919!3d-15.8828875!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a2dcbc36ee143%3A0xf4c08178c08f115f!2zRGluw6JtaWNh!5e0!3m2!1spt-BR!2sbr!4v1685484046890!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <br><br>
+
+    <h2>Endereço</h2> <br>
+    <p>CLN 05 Lote 04 - Loja 01, Riacho Fundo, Brasília - DF, 71805-401</p>
+  </section> 
+
+  <section id="produtos" class="py-5">
+    <div class="container">
+      <h2 class="text-center">Promoções</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="xadrez.png" class="card-img-top" alt="Ferragem 1">
+            <div class="card-body">
+              <h5 class="card-title">Corante líquido - Xadrez</h5>
+                <p class="card-text">É um pigmento corante de alto poder de tingimento e resistência, para colorir tintas à base d'água.</p>
+              <h3 class="preco2"> R$ 7,00 </h3>
+              <p class="preco" > R$ 9,99 </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="Spray.png" class="card-img-top" alt="Ferragem 2">
+            <div class="card-body">
+              <h5 class="card-title">Spray de tinta - Colorgin</h5>
+              <div id="text">
+                <p class="card-text">Colorgin decor em spray é uma linha de produtos formulados com resinas acrílicas de secagem rápida, que garantem ótimo acabamento e grande durabilidade. Possui ótimo poder de cobertura, resistência às intempéries.</p>
+              </div>
+              <p id="toggle-btn">Ler mais</p>
+              <h3 class="preco2"> R$ 15,00 </h3>
+              <p class="preco" > R$ 19,99 </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="assentoDeVazo.png" class="card-img-top" alt="Ferragem 2">
+            <div class="card-body">
+              <h5 class="card-title">Assento almofadado - Herc</h5>
+              <div id="text">
+                <p class="card-text">Assento Sanitário Almofadado Branco Herc pode ser utilizado em louças convencionais. Produto fabricado em EVA com preenchimento em poliuretano e acabamento brilhante na cor cinza claro oferecendo mais beleza ao seu banheiro. Assento almofadado super leve, resistente e macio. Possui fácil instalação e parafusos que possibilitam ajuste de distância para fixação a louça.</p>
+              </div>
+              <p id="toggle-btn">Ler mais</p>
+              <h3 class="preco2"> R$ 50,00 </h3>
+              <p class="preco" > R$ 59,99 </p> <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+  <script>
+    var toggleBtns = document.querySelectorAll('#toggle-btn');
+    
+    toggleBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var text = this.previousElementSibling;
+        
+        if (text.classList.contains('expanded')) {
+          text.classList.remove('expanded');
+          this.innerHTML = 'Ler mais';
+        } else {
+          text.classList.add('expanded');
+          this.innerHTML = 'Ler menos';
+        }
+      });
+    });
+  </script>
+  
+
+  
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2023 Dinâmica Ferragens. Todos os direitos reservados.</p>
+  </footer>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
